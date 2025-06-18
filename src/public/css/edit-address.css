@@ -1,0 +1,99 @@
+/* ===============================
+   共通スタイル
+=============================== */
+.address-wrapper {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.update-button {
+    margin-top: 30px;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.update-button:hover {
+    background-color: #e14a4a;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* ===============================
+   レスポンシブ対応：タブレット（〜850px）
+=============================== */
+@media screen and (max-width: 850px) {
+    .address-wrapper {
+        padding: 0 15px;
+        margin: 40px auto;
+    }
+
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+
+    .form-input {
+        font-size: 15px;
+        height: 38px;
+        padding: 0 8px;
+    }
+
+    .update-button {
+        font-size: 15px;
+        height: 42px;
+    }
+}
+
+
+/* ===============================
+   PC幅調整：1400〜1540px
+=============================== */
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .address-wrapper {
+        padding: 0 30px;
+    }
+}

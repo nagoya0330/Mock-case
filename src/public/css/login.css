@@ -1,0 +1,105 @@
+login-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.login-form-wrapper {
+    width: 90%;
+    max-width: 480px;
+    text-align: left;
+}
+
+.login-title {
+    text-align: center;
+    color: black;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 45px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: black;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.button-wrapper {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 28px;
+}
+
+.login-button {
+    background-color: red;
+    color: white;
+    padding: 14px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.link-wrapper {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   レスポンシブ対応（タブレット〜850px）
+============================== */
+@media screen and (max-width: 850px) {
+    .login-container {
+        padding-top: 40px;
+    }
+
+    .login-form-wrapper {
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .form-group input {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .login-button {
+        font-size: 15px;
+        padding: 12px 0;
+    }
+}
+
+
+/* ==============================
+   PC向け（1400〜1540px）
+============================== */
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .login-form-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

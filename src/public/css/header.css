@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+}
+
+.site-header {
+    background-color: #000;
+    padding: 10px 20px;
+    color: white;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.logo img {
+    display: block;
+}
+
+.search-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 14px 16px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.nav-menu a,
+.nav-menu button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* 出品ボタン専用スタイル */
+.site-header .btn-listing {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.site-header .btn-listing:hover {
+    background-color: black;
+    color: white;
+}
+
+/* タブレット以下 */
+@media screen and (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form {
+        order: 2;
+        margin: 10px 0;
+    }
+
+    .nav-menu {
+        order: 3;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    .btn-listing {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
