@@ -32,8 +32,7 @@ URL
 プロフィール画面_出品した商品一覧：http //localhost/mypage?page=sell
 
 phpMyAdmin：http://localhost:8080/
-
-![image](https://github.com/user-attachments/assets/256478f1-f292-4460-b710-88d064790a07)
+![スクリーンショット 2025-06-19 194927](https://github.com/user-attachments/assets/be80ae75-faab-4d7d-b4d6-bfada9007182)
 
 
 
