@@ -33,6 +33,7 @@ URL
 
 phpMyAdmin：http://localhost:8080/
 
-![image](https://github.com/user-attachments/assets/04c6924f-7309-417a-b45a-783d6ed12e0f)
+![image](https://github.com/user-attachments/assets/256478f1-f292-4460-b710-88d064790a07)
+
 
 
