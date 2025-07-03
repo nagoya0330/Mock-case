@@ -1,5 +1,5 @@
 /* ==============================
-   共通スタイル
+共通スタイル
 ============================== */
 .product-create-container {
     max-width: 600px;
@@ -60,7 +60,7 @@
     display: none;
 }
 
-.category-list input[type="checkbox"]:checked+.category-tag {
+.category-list input[type="checkbox"]:checked + .category-tag {
     background-color: #f66;
     color: white;
 }
@@ -128,9 +128,8 @@ textarea {
     margin-top: 5px;
 }
 
-
 /* ==============================
-   レスポンシブ：タブレット（〜850px）
+レスポンシブ：タブレット（〜850px）
 ============================== */
 @media screen and (max-width: 850px) {
     .product-create-container {
@@ -159,9 +158,8 @@ textarea {
     }
 }
 
-
 /* ==============================
-   PC幅調整：1400〜1540px
+PC幅調整：1400〜1540px
 ============================== */
 @media screen and (min-width: 1400px) and (max-width: 1540px) {
     .product-create-container {

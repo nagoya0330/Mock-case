@@ -68,9 +68,8 @@
     margin-top: 5px;
 }
 
-
 /* ==============================
-   レスポンシブ対応：タブレット（〜850px）
+レスポンシブ対応：タブレット（〜850px）
 ============================== */
 @media screen and (max-width: 850px) {
     .register-container {
@@ -93,9 +92,8 @@
     }
 }
 
-
 /* ==============================
-   PC幅調整：1400〜1540px
+PC幅調整：1400〜1540px
 ============================== */
 @media screen and (min-width: 1400px) and (max-width: 1540px) {
     .register-form-wrapper {

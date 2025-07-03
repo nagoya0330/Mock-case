@@ -14,7 +14,7 @@ class PurchaseController extends Controller
     {
         $item = Item::findOrFail($item_id);
 
-        // 🔒 すでに購入済みの場合はトップにリダイレクト
+        //  すでに購入済みの場合はトップにリダイレクト
         if ($item->is_sold) {
             return redirect()->route('home')->with('error', 'この商品はすでに購入されています');
         }
@@ -37,7 +37,7 @@ class PurchaseController extends Controller
     {
         $item = Item::findOrFail($item_id);
 
-        // 🔒 すでに購入済みなら処理しない
+        //  すでに購入済みなら処理しない
         if ($item->is_sold) {
             return redirect()->route('home')->with('error', 'この商品はすでに購入されています');
         }

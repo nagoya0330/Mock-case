@@ -8,19 +8,6 @@
 
         <h1 class="login-title">ログイン</h1>
 
-        {{-- 上部エラーリスト削除（またはコメントアウト） --}}
-        {{-- 
-        @if ($errors->any())
-            <div class="error-box">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li class="error-message">{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif 
-        --}}
-
         <form method="POST" action="{{ route('login') }}">
             @csrf
 

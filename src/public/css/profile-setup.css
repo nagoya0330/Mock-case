@@ -1,11 +1,11 @@
 /* ===============================
-   共通スタイル
+共通スタイル
 =============================== */
 .profile-container {
     max-width: 480px;
     margin: 0 auto;
     padding: 40px 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
 .profile-form-wrapper {
@@ -107,7 +107,7 @@
 }
 
 /* ===============================
-   レスポンシブ対応：タブレット（〜850px）
+レスポンシブ対応：タブレット（〜850px）
 =============================== */
 @media screen and (max-width: 850px) {
     .profile-container {
@@ -139,13 +139,11 @@
     }
 }
 
-
 /* ===============================
-   PC幅調整：1400〜1540px
+PC幅調整：1400〜1540px
 =============================== */
 @media screen and (min-width: 1400px) and (max-width: 1540px) {
     .profile-container {
         padding: 40px 30px;
     }
 }
-

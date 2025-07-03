@@ -15,10 +15,10 @@
     <!-- タブ -->
     <div class="tab-menu">
         <a href="{{ url('/' . ($keyword ? '?search=' . urlencode($keyword) : '')) }}"
-           class="tab {{ $page === 'recommend' ? 'active' : '' }}">おすすめ</a>
+        class="tab {{ $page === 'recommend' ? 'active' : '' }}">おすすめ</a>
 
         <a href="{{ url('/?page=mylist' . ($keyword ? '&search=' . urlencode($keyword) : '')) }}"
-           class="tab {{ $page === 'mylist' ? 'active' : '' }}">マイリスト</a>
+        class="tab {{ $page === 'mylist' ? 'active' : '' }}">マイリスト</a>
     </div>
 
     <hr class="divider">

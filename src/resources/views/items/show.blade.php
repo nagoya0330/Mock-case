@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        {{-- 🔒 購入ボタン（未購入時のみ） --}}
+        {{--  購入ボタン（未購入時のみ） --}}
         @if (!$item->is_sold)
             <a href="{{ route('purchase.confirm', ['item_id' => $item->id]) }}" class="red-button buy-button">
                 購入手続きへ

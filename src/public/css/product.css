@@ -1,5 +1,5 @@
 /* ===============================
-   共通スタイル
+共通スタイル
 =============================== */
 body {
     font-family: Arial, sans-serif;
@@ -197,9 +197,8 @@ body {
     margin-top: 10px;
 }
 
-
 /* ===============================
-   レスポンシブ対応（タブレット 〜850px）
+レスポンシブ対応（タブレット 〜850px）
 =============================== */
 @media screen and (max-width: 850px) {
     .container {
@@ -247,7 +246,6 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ccc;
-    /* グレーで非アクティブ感を演出 */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -261,9 +259,8 @@ body {
     font-weight: bold;
 }
 
-
 /* ===============================
-   PC幅調整（1400〜1540px）
+PC幅調整（1400〜1540px）
 =============================== */
 @media screen and (min-width: 1400px) and (max-width: 1540px) {
     .container {

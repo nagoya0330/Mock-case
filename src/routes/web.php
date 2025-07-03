@@ -17,11 +17,8 @@ use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ProfileController;
 
-/*
-|--------------------------------------------------------------------------
-| Fortify オーバーライド：ログイン時に LoginRequest を使う
-|--------------------------------------------------------------------------
-*/
+
+
 Route::post('/login', function (LoginRequest $request) {
     if (Auth::attempt($request->only('email', 'password'))) {
         $request->session()->regenerate();
@@ -50,7 +47,7 @@ Route::post('/logout', function (Request $request) {
 
 /*
 |--------------------------------------------------------------------------
-| 🔓 未ログインでもアクセス可能なルート
+|  未ログインでもアクセス可能なルート
 |--------------------------------------------------------------------------
 */
 // トップページ（商品一覧）
@@ -65,7 +62,7 @@ Route::get('/purchase/stripe/{item_id}', fn() => 'ここでStripe決済処理を
 
 /*
 |--------------------------------------------------------------------------
-| 🔐 ログイン + 認証済みが必要なルート
+|  ログイン + 認証済みが必要なルート
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -79,7 +76,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 /*
 |--------------------------------------------------------------------------
-| 🔐 ログインのみ必要なルート（認証済みは不要）
+|  ログインのみ必要なルート（認証済みは不要）
 |--------------------------------------------------------------------------
 */
 Route::middleware('auth')->group(function () {

@@ -14,11 +14,15 @@ class UpdateAddressesTableForSingleAddressField extends Migration
     public function up()
     {
         Schema::table('addresses', function (Blueprint $table) {
-            // 旧カラムの削除
-            $table->dropColumn(['prefecture', 'city', 'street']);
+            // 旧カラムの削除（もし存在していたら）
+            if (Schema::hasColumn('addresses', 'prefecture')) {
+                $table->dropColumn(['prefecture', 'city', 'street']);
+            }
 
-            // 新カラムの追加
-            $table->string('address')->after('postal_code');
+            // addressカラムがまだなければ追加
+            if (!Schema::hasColumn('addresses', 'address')) {
+                $table->string('address')->after('postal_code');
+            }
         });
     }
 

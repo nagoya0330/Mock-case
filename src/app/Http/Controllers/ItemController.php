@@ -14,41 +14,38 @@ class ItemController extends Controller
      * 商品一覧表示（おすすめ or マイリスト）
      */
     public function index(Request $request)
-    {
-        $page = $request->query('page', 'recommend'); // ← 修正: page に統一
-        $keyword = $request->query('search'); // 検索キーワード
+{
+    $page = $request->query('page', 'recommend');
+    $keyword = $request->query('search');
 
-        if ($page === 'mylist') {
-            // マイリスト表示（ログインユーザーの「いいね」）
-            if (Auth::check()) {
-                $query = Auth::user()->favorites();
-
-                // 検索がある場合、商品名でフィルタ
-                if (!empty($keyword)) {
-                    $query->where('name', 'like', '%' . $keyword . '%');
-                }
-
-                $items = $query->latest()->get();
-            } else {
-                $items = collect(); // 未ログイン時は空
-            }
-        } else {
-            // おすすめ商品表示（ログインユーザーの出品商品を除外）
-            $query = Item::query();
-
-            if (Auth::check()) {
-                $query->where('user_id', '!=', Auth::id());
-            }
+    if ($page === 'mylist') {
+        if (Auth::check()) {
+            $query = Auth::user()->favorites();
 
             if (!empty($keyword)) {
                 $query->where('name', 'like', '%' . $keyword . '%');
             }
 
-            $items = $query->latest()->get();
+            $items = $query->orderByDesc('id')->get(); // latest()ではなくid順でOK
+        } else {
+            $items = collect(); // 未ログイン時は空
+        }
+    } else {
+        $query = Item::query();
+
+        if (Auth::check()) {
+            $query->where('user_id', '!=', Auth::id());
         }
 
-        return view('index', compact('items', 'page', 'keyword')); // ← page を渡す
+        if (!empty($keyword)) {
+            $query->where('name', 'like', '%' . $keyword . '%');
+        }
+
+        $items = $query->latest()->get();
     }
+
+    return view('index', compact('items', 'page', 'keyword'));
+}
 
     /**
      * 商品詳細ページ表示（いいね数・コメント数も取得）
