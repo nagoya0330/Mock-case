@@ -37,11 +37,14 @@ MailtrapをSMTPとして使用しています。
 本アプリでは メール認証機能 を導入しており、Mailtrap を使用して検証を行います。
 .env ファイルに Mailtrap のSMTP情報を記載してください  
 Mailtrap のダッシュボード上で、送信された確認メールのリンクをクリックし認証を完了してください  
+ログインURL：https://mailtrap.io  
+メールアドレス：furimaapuri24@gmail.com  
+ログインパスワード：Test13579!!!  
 
 ### ◾️ Mailtrapの設定手順  
 
 1. [Mailtrap](https://mailtrap.io/) に登録  
-2. ダッシュボードの「Inbox」→「SMTP Settings」から情報を確認  
+2. ダッシュボードの「Sandbox」→「SMTP Settings」から情報を確認  
 3. `.env` ファイルに以下を設定：
 
 ```env
