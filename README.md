@@ -72,11 +72,33 @@ MAIL_FROM_NAME="Laravel App"
 ## 【単体テストについて】   
 
 全体テストを実行    
-php artisan test  
+docker-compose exec php php artisan test --env=testing 
 
 特定ファイルのみに絞って実行（例：ExhibitionTest）    
-php artisan test --filter=ExhibitionTest
-その他のテストも同様に tests/Feature/ ディレクトリ内に記述。
+docker-compose exec php php artisan test --env=testing --filter=ExhibitionTest
+その他のテストも同様に tests/Feature/ ディレクトリ内に記述。  
+
+## 【テスト実行前の準備】  
+
+1.env.testingの確認  
+.env.testing には、本番DBとは別の test DB (例: demo_test) を指定  
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=demo_test
+DB_USERNAME=root
+DB_PASSWORD=root  
+```
+2.テストDBの作成  
+docker-compose exec mysql mysql -u root -proot -e "CREATE DATABASE IF NOT EXISTS demo_test;"   
+
+3.マイグレーション&シード  
+docker-compose exec php php artisan migrate:fresh --seed --env=testing  
+
+##【補足情報】  
+Laravelは php artisan test 実行時に .env.testingを優先読みします
 
 ---  
 
