@@ -53,12 +53,12 @@ MAIL_HOST=sandbox.smtp.mailtrap.io
 MAIL_PORT=2525
 MAIL_USERNAME=（Mailtrapで発行されたユーザー名）
 MAIL_PASSWORD=（Mailtrapで発行されたパスワード）
-MAIL_ENCRYPTION=null
-MAIL_FROM_ADDRESS=example@example.com
-MAIL_FROM_NAME="Freemarket"
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=noreply@example.com
+MAIL_FROM_NAME="Laravel App"  
 ```
 
-※ 実際のユーザー名・パスワードは .env ファイルをご確認ください
+※ 実際のユーザー名・パスワードは ダッシュボードをご確認ください
 
 ---  
 
