@@ -1,2 +1,6 @@
 docker/mysql/data/*
 !.gitkeep
+!public/storage
+!public/storage/*
+!storage/app/public/items/
+!storage/app/public/items/*

@@ -13,3 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# allow item images for reviewers
+!storage/app/public/items/
+!storage/app/public/items/*
