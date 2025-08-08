@@ -14,7 +14,8 @@
 3. `.env.example` を `.env` にコピーして環境変数を設定  
 4. `php artisan key:generate`  
 5. `php artisan migrate`  
-6. `php artisan db:seed`  
+6. `php artisan db:seed`
+7. `php artisan storage:link` 
 
 ---
 
